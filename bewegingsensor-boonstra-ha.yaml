@@ -1,0 +1,12 @@
+substitutions:
+  name: "bewegingsensor-boonstra"
+  friendly_name: "Beweging sensor Boonstra"
+  illuminance_update_interval: "2s"
+  hidden_ssid: "false"
+  log_level: DEBUG
+
+packages:
+  device_base: !include common/everything-presence-lite-base.yaml
+  ld2450_base: !include common/ld2450-base.yaml
+  bme280_base: !include common/bme280-base.yaml
+  bluetooth_base: !include common/bluetooth-base.yaml
