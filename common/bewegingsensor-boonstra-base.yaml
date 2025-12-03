@@ -1,0 +1,78 @@
+esphome:
+  name: ${name}
+  comment: Bewegingsensor Boonstra
+  friendly_name: ${friendly_name}
+  name_add_mac_suffix: True
+  project:
+    name: Boonstra.Bewegingsensor
+    version: "0.1.0"
+
+esp32:
+  board: esp32dev
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+  level: ${log_level}
+
+# Enable Home Assistant API
+api:
+
+ota:
+  - platform: esphome
+    id: ota_esphome
+  - platform: http_request
+    id: ota_http_request
+
+http_request:
+
+wifi:
+
+improv_serial:
+
+light:
+ - platform: status_led
+   name: ESP32 LED
+   id: esp32_led
+   pin: GPIO14
+   internal: false
+   restore_mode: ALWAYS_OFF
+   entity_category: config
+
+
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: 0
+      inverted: true
+    id: flash_button
+    internal: True
+    filters:
+      - delayed_on: 50ms 
+    on_multi_click:
+      - timing:
+          - ON for 0.2s to 3s
+          - OFF for 0.1s to 2s
+          - ON for 0.2s to 3s
+          - OFF for 0.1s to 2s
+          - ON for at least 5s 
+        then:
+          - repeat: 
+              count: 5
+              then:
+                - light.turn_on: esp32_led
+                - delay: 150ms
+                - light.turn_off: esp32_led
+                - delay: 150ms
+          - light.turn_on: esp32_led
+          - button.press: factory_reset_button
+
+button:
+  - platform: restart
+    icon: mdi:power-cycle
+    name: "ESP Reboot"
+    entity_category: config
+  - platform: factory_reset
+    id: "factory_reset_button"
+    internal: True

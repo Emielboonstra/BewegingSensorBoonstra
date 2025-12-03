@@ -1,7 +1,6 @@
 substitutions:
   name: "bewegingsensor-boonstra"
   friendly_name: "Beweging sensor Boonstra"
-  illuminance_update_interval: "2s"
   hidden_ssid: "false"
   log_level: DEBUG
 

@@ -1,0 +1,15 @@
+i2c:
+  id: bus_a
+  sda: GPIO5
+  scl: GPIO6
+  scan: true
+  
+sensor: 
+  - platform: bme280_i2c
+    i2c_id: bus_a
+    temperature:
+      name: "Temperatuur"
+    pressure:
+      name: "Luchtdruk"
+    humidity:
+      name: "luchtvochtigheid"
