@@ -8,3 +8,5 @@ packages:
   device_base: !include common/bewegingsensor-boonstra-base.yaml
   ld2450_base: !include common/ld2450-base.yaml
   bluetooth_base: !include common/bluetooth-base.yaml
+  bme280_base: !include common/bme280-base.yaml
+  pir_base: !include common/pir-base.yaml
