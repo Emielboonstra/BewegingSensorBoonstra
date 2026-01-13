@@ -1,8 +1,8 @@
-# substitutions:
-#   name: "bewegingsensor-boonstra"
-#   friendly_name: "Beweging sensor Boonstra"
-#   hidden_ssid: "false"
-#   log_level: DEBUG
+substitutions:
+  name: "bewegingsensor-boonstra"
+  friendly_name: "Beweging sensor Boonstra"
+  hidden_ssid: "false"
+  log_level: DEBUG
 
 packages:
   device_base: !include common/bewegingsensor-boonstra-base.yaml
