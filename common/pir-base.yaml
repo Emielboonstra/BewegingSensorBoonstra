@@ -1,1 +1,10 @@
-
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO4
+      mode: INPUT_PULLDOWN
+    name: "PIR Bewegingssensor"
+    device_class: motion
+    filters:
+      - delayed_on: 100ms
+      - delayed_off: 5s
