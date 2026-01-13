@@ -1169,12 +1169,12 @@ text:
 uart:
   id: uart_bus
   tx_pin: 
-    number: GPIO17
+    number: GPIO20
     mode:
       input: true
       pullup: true
   rx_pin: 
-    number: GPIO16
+    number: GPIO21
     mode:
       input: true
       pullup: true
