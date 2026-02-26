@@ -1,6 +1,6 @@
 substitutions:
-  name: "bewegingsensor-boonstra"
-  friendly_name: "Beweging sensor Boonstra"
+  name: "bewegingssensor-boonstra"
+  friendly_name: "Bewegings sensor Boonstra"
   hidden_ssid: "false"
   log_level: DEBUG
 
