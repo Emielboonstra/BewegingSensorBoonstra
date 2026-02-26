@@ -1,7 +1,7 @@
 i2c:
   id: bus_a
-  sda: GPIO5
-  scl: GPIO6
+  sda: GPIO8
+  scl: GPIO9
   scan: true
   
 sensor: 
