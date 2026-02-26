@@ -4,8 +4,8 @@ esphome:
   friendly_name: ${friendly_name}
   name_add_mac_suffix: True
   project:
-    name: Boonstra.Bewegingsensor
-    version: "0.1.0"
+    name: EmielBoonstra.Bewegingsensor
+    version: "0.1.1"
 
 esp32:
   board: esp32dev
