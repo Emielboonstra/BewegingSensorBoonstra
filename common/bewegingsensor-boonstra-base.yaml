@@ -8,7 +8,6 @@ esphome:
     version: "0.1.1"
 
 esp32:
-  board: esp32dev
   framework:
     type: esp-idf
 
