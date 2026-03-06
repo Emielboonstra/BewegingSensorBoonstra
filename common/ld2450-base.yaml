@@ -1,7 +1,7 @@
 uart:
   id: uart_ld2450
-  tx_pin: GPIO20
-  rx_pin: GPIO21
+  tx_pin: GPIO06
+  rx_pin: GPIO07
   baud_rate: 256000
   parity: NONE
   stop_bits: 1

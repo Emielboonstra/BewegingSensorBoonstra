@@ -1,0 +1,10 @@
+substitutions:
+  name: "Aanwezigheidssensor-boonstra"
+  friendly_name: "Aanwezigheidssensor Boonstra"
+  hidden_ssid: "false"
+  log_level: DEBUG
+
+packages:
+  device_base: !include common/aanwezigheidssensor-boonstra-lite-base.yaml
+  ld2450_base: !include common/ld2450-base.yaml
+  bluetooth_base: !include common/bluetooth-base.yaml
