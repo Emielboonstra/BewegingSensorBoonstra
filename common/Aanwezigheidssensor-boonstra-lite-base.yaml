@@ -1,0 +1,31 @@
+esphome:
+  name: ${name}
+  comment: Aanwezigheidssensor Boonstra
+  friendly_name: ${friendly_name}
+  name_add_mac_suffix: True
+  project:
+    name: EmielBoonstra.Aanwezigheidssensor_Lite
+    version: "0.1"
+
+esp32:
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+  level: ${log_level}
+
+# Enable Home Assistant API
+api:
+
+ota:
+  - platform: esphome
+    id: ota_esphome
+  - platform: http_request
+    id: ota_http_request
+
+http_request:
+
+wifi:
+
+improv_serial:
